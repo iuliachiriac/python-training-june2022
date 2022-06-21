@@ -6,7 +6,8 @@
     For example, if the speed is 60, it should print: `"Points: 2"`.
     * If the driver gets more than 12 points, it should print: 
     `"License suspended"`
- Define a variable called `speed` and assign an integer value to it. 
+ 
+Define a variable called `speed` and assign an integer value to it. 
  After running the program once, change its value and notice the changed output.
  
 1. Write a Python program which iterates the integers from 1 to 50. 
