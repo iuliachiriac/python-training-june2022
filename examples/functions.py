@@ -36,3 +36,19 @@ def all_parameters_types(pos1, pos2, *pos, req_kw, kw1=None, kw2=0, **kwargs):
 
 all_parameters_types(1, 2, req_kw='test')
 all_parameters_types(1, 2, 3, 4, 5, 6, req_kw='test', kw1='value', kw7='xx')
+
+
+def f(*args: str, n: int = None):
+    """Enter any number of strings, and an optional integer parameter n
+    (value defaults to 0 if left unspecified)"""
+    if not n:
+        return list(args)
+    l = []
+    for elem in args:
+        if len(elem) > n:
+            l.append(elem)
+    return l
+
+
+print(f('ceva', 'altceva', n=5))
+print(f('', 'altceva'))
