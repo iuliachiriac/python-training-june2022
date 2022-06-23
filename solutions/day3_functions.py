@@ -41,8 +41,9 @@ print(filter_long_words(min_length=10))
 
 def filter_long_words_v2(*words, min_length=None):
     # long_words = [word for word in words if len(word) > min_length]
-    if not min_length:
-        return list(words)
+    if min_length is None:
+        return list(words)  # return early pattern
+
     long_words = []
     for word in words:
         if len(word) > min_length:

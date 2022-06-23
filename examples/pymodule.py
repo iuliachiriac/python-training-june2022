@@ -13,6 +13,10 @@ def get_long_strings(*args: str, n: int = None):
     return l
 
 
+def hello():
+    print('Hello world')
+
+
 # print(f'The name of the module is {__name__}')
 if __name__ == '__main__':
     print(get_long_strings('ceva', 'altceva', n=5))

@@ -29,3 +29,10 @@ print('Built-in names:', len, tuple, TypeError, None)
 print('Global names:', X, func, end='\n\n')
 
 # int = 0  # shadowing built-in name - not recommended
+
+
+# def str(x):  # shadowing built-in name - not recommended
+#     return x + 1
+#
+#
+# print(str(0))
