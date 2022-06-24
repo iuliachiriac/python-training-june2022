@@ -15,3 +15,7 @@ class WithdrawTestCase(unittest.TestCase):
         with self.assertRaises(InsufficientFundsException):
             self.bank_account.withdraw(120)
         self.assertEqual(self.bank_account.balance, 100)
+
+
+if __name__ == '__main__':
+    unittest.main()
