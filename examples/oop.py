@@ -6,8 +6,8 @@ class Person:
 
     count = 0  # class variable
 
-    def __init__(self, name, date_of_birth):
-        self.name = name  # instance variables
+    def __init__(self, name_param, date_of_birth):
+        self.name = name_param  # instance variables
         self.date_of_birth = date_of_birth
         self._increment_count()
 
@@ -42,6 +42,12 @@ class Student(Person):
         super().greet("Good morning")
 
 
+class MyClass:
+    def __init__(self, **kwargs):
+        for key, val in kwargs.items():
+            setattr(self, key, val)
+
+
 if __name__ == '__main__':
     p1 = Person('Anna', date(2001, 5, 7))  # __init__ is executed
 
@@ -73,6 +79,12 @@ if __name__ == '__main__':
 
     s1 = Student('Mike', 'ASE', date(2003, 2, 23))
     s1.greet()
-    print(s1, s1.university)
+    print(s1, s1.university, s1.age)
 
     print(Student.count, Person.count)
+
+    person = MyClass(name='Jane', age=15, height=1.5)
+    print(person.name, person.age, person.height)
+
+    dog = MyClass(name='Bobby', owner=person)
+    print(dog.name, dog.owner.name)
